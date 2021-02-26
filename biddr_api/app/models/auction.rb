@@ -1,5 +1,6 @@
 class Auction < ApplicationRecord
     #Associations
+    belongs_to :user
     has_many :bids, dependent: :destroy
     #validations
     validates :title, presence: true
