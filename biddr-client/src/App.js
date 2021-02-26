@@ -7,6 +7,7 @@ import AuctionIndexPage from './components/AuctionIndexPage';
  import Navbar from './components/Navbar';
  import SignInPage from './components/SignInPage';
  import { Session } from './requests';
+ import AuctionNewPage from './components/AuctionNewPage';
 import {
   BrowserRouter,
   Route,
@@ -20,7 +21,19 @@ class App extends Component {
       user:null
      }
      this.handleSubmit=this.handleSubmit.bind(this)
+     this.destroySession=this.destroySession.bind(this)
   }
+
+ //to get current user name on navbar
+ componentDidMount() {
+  Session.currentUser()
+  .then(user=>{
+    console.log('user', user);
+    this.setState((state)=>{
+      return {user:user}
+    })
+  })
+}
 
 //signin
 handleSubmit(params){
@@ -35,15 +48,28 @@ handleSubmit(params){
     })
 
 }
+//signout
+destroySession(){
+  Session.destroy()
+  .then(res=>{
+    this.setState(
+        (
+        state=>{return {user:null}}
+        )
+      )
+    })
+}
+
 
   render() {
   return (
     <div className="App">
     
      <BrowserRouter> 
-     <Navbar></Navbar>
+     <Navbar currentUser={this.state.user} destroySession={this.destroySession}/>
      <Switch>
      <Route exact path='/auctions' component={AuctionIndexPage} />
+     <Route exact path='/auctions/new' component={AuctionNewPage} />
      <Route path = '/welcome' component = {WelcomePage} />
      <Route exact path='/auctions/:id' component={AuctionShowPage} />
      {/* <Route path='/sign_in'component={SignInPage}></Route> */}

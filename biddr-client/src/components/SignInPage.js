@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const SignInPage =({handleSubmit})=>{
+const SignInPage =({handleSubmit, history})=>{
     function onSubmit(event){
         event.preventDefault();
         const {currentTarget}=event;
@@ -11,6 +11,7 @@ const SignInPage =({handleSubmit})=>{
             password: formData.get('password')
         }
         handleSubmit(formValues);
+        history.push('/auctions');
         
 
     }
