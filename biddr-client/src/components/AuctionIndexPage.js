@@ -39,6 +39,7 @@ class AuctionIndexPage extends Component {
                   <Link to={`/auctions/${a.id}`}>
                     <h1>{a.id} - {a.title}</h1>
                   </Link>
+                  <p>{a.created_at}</p>
                  
                 </div>
               )
