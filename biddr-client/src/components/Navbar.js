@@ -25,8 +25,8 @@ const Navbar = (props)=>{
                 :
                 <NavLink to='/sign_in'>Sign In</NavLink>   
             } 
-            {/* |
-            <NavLink to='/sign_up'>Sign Up</NavLink> */}
+            |
+            <NavLink to='/sign_up'>Sign Up</NavLink>
             {/* {!currentUser && (
             <NavLink to='/sign_up'>Sign Up</NavLink>
             ) */}

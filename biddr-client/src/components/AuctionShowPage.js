@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import AuctionDetails from './AuctionDetails';
-// import BidList from './BidList';
+import BidList from './BidList';
 import { Auction } from '../requests';
 
 class AuctionShowPage extends Component {
@@ -40,10 +40,10 @@ class AuctionShowPage extends Component {
             created_at={new Date(created_at)}
             updated_at={new Date(updated_at)}
           />
-          {/* <strong><p>Previous bids</p></strong>
+          <strong><p>Previous bids</p></strong>
           <BidList
             bids={bids}
-            />  */}
+            /> 
           {/* <Link question={this.state.question} to={`/questions/${this.state.question.id}/edit`}>Edit</Link>
           <AnswerList
             answers={answers}
