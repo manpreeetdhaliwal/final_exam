@@ -4,6 +4,7 @@ import React from 'react';
 import WelcomePage from './components/WelcomePage';
 import AuctionIndexPage from './components/AuctionIndexPage';
  import AuctionShowPage from './components/AuctionShowPage';
+ import Navbar from './components/Navbar';
 import {
   BrowserRouter,
   Route,
@@ -20,7 +21,9 @@ class App extends Component {
   render() {
   return (
     <div className="App">
+    
      <BrowserRouter> 
+     <Navbar></Navbar>
      <Switch>
      <Route exact path='/auctions' component={AuctionIndexPage} />
      <Route path = '/welcome' component = {WelcomePage} />
