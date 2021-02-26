@@ -287,3 +287,229 @@ Processing by AuctionsController#show as HTML
 Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 1.6ms | Allocations: 7095)
 
 
+Started GET "/auctions" for ::1 at 2021-02-26 10:17:54 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/manpreet/quiz_3/biddr_api/app/controllers/auctions_controller.rb:37: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/auctions_controller.rb:37: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/auctions_controller.rb:37: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/auctions_controller.rb:37: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/auctions" for ::1 at 2021-02-26 10:18:25 -0800
+Processing by AuctionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering auctions/index.html.erb within layouts/application
+  [1m[36mAuction Load (0.9ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/views/auctions/index.html.erb:2
+  Rendered auctions/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 4580)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 9421)
+Completed 200 OK in 25ms (Views: 14.3ms | ActiveRecord: 5.2ms | Allocations: 14812)
+
+
+Started GET "/api/v1/auctions" for ::1 at 2021-02-26 10:18:33 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (0.8ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.8ms | Allocations: 1394)
+
+
+Started GET "/api/v1/auctions" for ::1 at 2021-02-26 10:18:34 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (0.9ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.9ms | Allocations: 1249)
+
+
+Started GET "/api/v1/auctions" for ::1 at 2021-02-26 10:21:11 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (0.9ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.9ms | Allocations: 1248)
+
+
+Started GET "/api/v1/auctions" for ::1 at 2021-02-26 10:22:10 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.2ms | Allocations: 4423)
+
+
+  
+NameError (uninitialized constant Api::V1::AuctionsController::AuctionCollectionSerializer):
+  
+app/controllers/api/v1/auctions_controller.rb:5:in `index'
+Started GET "/api/v1/auctions" for ::1 at 2021-02-26 10:22:41 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (0.6ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 4.0ms | Allocations: 6141)
+
+
+Started GET "/api/v1/auctions/1" for ::1 at 2021-02-26 10:22:45 -0800
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::AuctionsController
+Did you mean?  index):
+  
+actionpack (6.1.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3) lib/rails/engine.rb:539:in `call'
+puma (5.2.1) lib/puma/configuration.rb:247:in `call'
+puma (5.2.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.1) lib/puma/server.rb:431:in `process_client'
+puma (5.2.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/api/v1/auctions/1" for ::1 at 2021-02-26 10:27:13 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mAuction Load (0.5ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:9:in `show'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 4.3ms | Allocations: 6609)
+
+
+Started GET "/api/v1/auctions" for ::1 at 2021-02-26 10:35:27 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 5.6ms | Allocations: 6985)
+
+
+  
+NameError (uninitialized constant Api::V1::AuctionsController::AuctionCollectionSerializer):
+  
+app/controllers/api/v1/auctions_controller.rb:5:in `index'
+Started GET "/api/v1/auctions" for ::1 at 2021-02-26 10:35:34 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2587)
+
+
+  
+NameError (uninitialized constant Api::V1::AuctionsController::AuctionCollectionSerializer):
+  
+app/controllers/api/v1/auctions_controller.rb:5:in `index'
+Started GET "/auctions" for ::1 at 2021-02-26 10:35:49 -0800
+Processing by AuctionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering auctions/index.html.erb within layouts/application
+  [1m[36mAuction Load (3.2ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/views/auctions/index.html.erb:2
+  Rendered auctions/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 3619)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 6397)
+Completed 200 OK in 24ms (Views: 17.4ms | ActiveRecord: 3.2ms | Allocations: 7276)
+
+
+Started GET "/auctions/1" for ::1 at 2021-02-26 10:35:57 -0800
+Processing by AuctionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuction Load (0.8ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auctions_controller.rb:34:in `find_auction'
+  Rendering layout layouts/application.html.erb
+  Rendering auctions/show.html.erb within layouts/application
+  [1m[36mBid Load (0.9ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1 ORDER BY "bids"."price" DESC[0m  [["auction_id", 1]]
+  ↳ app/views/auctions/show.html.erb:32
+  [1m[36mCACHE Bid Load (0.0ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1 ORDER BY "bids"."price" DESC[0m  [["auction_id", 1]]
+  ↳ app/views/auctions/show.html.erb:33
+  Rendered auctions/show.html.erb within layouts/application (Duration: 11.5ms | Allocations: 4756)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 7399)
+Completed 200 OK in 41ms (Views: 14.5ms | ActiveRecord: 8.2ms | Allocations: 17461)
+
+
+Started GET "/api/v1/auctions/" for ::1 at 2021-02-26 10:36:09 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2587)
+
+
+  
+NameError (uninitialized constant Api::V1::AuctionsController::AuctionCollectionSerializer):
+  
+app/controllers/api/v1/auctions_controller.rb:5:in `index'
+Started GET "/api/v1/auctions" for ::1 at 2021-02-26 10:39:19 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (2.2ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 45ms (Views: 14.4ms | ActiveRecord: 7.2ms | Allocations: 11141)
+
+
+Started GET "/api/v1/auctions" for ::1 at 2021-02-26 10:39:22 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (0.9ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 1393)
+
+
+Started GET "/api/v1/auctions/1" for ::1 at 2021-02-26 10:39:29 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mAuction Load (0.8ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:9:in `show'
+[active_model_serializers] Rendered AuctionSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 1.7ms | Allocations: 2717)
+
+
+Started GET "/api/v1/auctions/" for ::1 at 2021-02-26 10:40:50 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (0.9ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 200 OK in 58ms (Views: 23.7ms | ActiveRecord: 9.6ms | Allocations: 6465)
+
+
+Started GET "/api/v1/auctions/1" for ::1 at 2021-02-26 10:40:55 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mAuction Load (0.8ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:9:in `show'
+[active_model_serializers] Rendered AuctionSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 0.8ms | Allocations: 2237)
+
+

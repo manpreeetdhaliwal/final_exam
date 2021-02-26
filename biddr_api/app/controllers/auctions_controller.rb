@@ -3,6 +3,10 @@ class AuctionsController < ApplicationController
     before_action :find_auction, only: [:show]
     def index
         @auctions = Auction.all.order(created_at: :DESC)
+        respond_to do |format|
+            format.html { render :index }
+            format.json { render json: @auctions }
+        end
     end
     def show
         # @auction = Auction.find params[:id]
