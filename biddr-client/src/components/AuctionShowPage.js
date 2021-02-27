@@ -10,7 +10,7 @@ class AuctionShowPage extends Component {
       this.state = {
         auction: {}
       }
-      // this.deleteAnswer = this.deleteAnswer.bind(this)
+      
     }
   
     componentDidMount() {

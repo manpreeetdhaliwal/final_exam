@@ -25,6 +25,7 @@ class AuctionNewPage extends Component {
 render(){
     return(
       <div className="container">
+        <p><strong>Add New Auction Item</strong></p>
         <form onSubmit={event => this.createAuction(event)}>
           
           <div>
@@ -40,13 +41,14 @@ render(){
           <div>
             <label htmlFor='end_date'>End Date</label>
             <br />
-            <input type='date' name='end_date' id='end_date' />
+            <input type='date' name='end_date' id='end_date' required/>
           </div>
           <div>
             <label htmlFor='reserve_price'>Reserve Price</label>
             <br />
-            <input type='number' name='reserve_price' id='reserve_price' />
+            <input type='number' name='reserve_price' id='reserve_price' required/>
           </div>
+          <br></br>
           <div>
             <input type='submit' value='Submit' />
           </div>

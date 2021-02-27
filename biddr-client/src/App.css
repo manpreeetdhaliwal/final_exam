@@ -67,16 +67,19 @@
   width: 100%;
   background-color: #555;
   overflow: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 /* Navbar links */
 .navbar-left {
   float: left;
-  text-align: center;
+  text-align: left;
   padding: 2px;
   margin-left: 5px;
   color: black;
-  font-size: 20px;
+  /* font-size: 20px; */
   height: 10vh; 
   background-repeat: no-repeat;
   background-size: 5vh;
@@ -86,9 +89,14 @@
 }
 .navbar-right {
   float: right;
-  text-align: center;
+  text-align: right;
+  font-family: 'Roboto', sans-serif;
   padding: 10px;
   color: black;
   text-decoration: green;
   font-size: 20px;
+  display: flex;
+ justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
