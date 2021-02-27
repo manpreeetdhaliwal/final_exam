@@ -1,5 +1,15 @@
 .App {
-  text-align: center;
+  text-align: left;
+
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.font {
+  font-family: cursive;
 }
 
 .App-logo {
@@ -35,4 +45,50 @@
   to {
     transform: rotate(360deg);
   }
+}
+.Welcome {
+  background-image: url("https://searchengineland.com/figz/wp-content/seloads/2014/09/auction-bid-gavel-money-ss-1920-800x450.jpg");
+  height: 87vh; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+.top-left {
+  position: absolute;
+  top: 78px;
+  left: 26px;
+  font-size: 25px;
+  font-style: italic;
+  color: black;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar-left {
+  float: left;
+  text-align: center;
+  padding: 2px;
+  margin-left: 5px;
+  color: black;
+  font-size: 20px;
+  height: 10vh; 
+  background-repeat: no-repeat;
+  background-size: 5vh;
+  position: relative;
+  border-radius: 50px;
+
+}
+.navbar-right {
+  float: right;
+  text-align: center;
+  padding: 10px;
+  color: black;
+  text-decoration: green;
+  font-size: 20px;
 }

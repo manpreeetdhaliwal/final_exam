@@ -31,7 +31,7 @@ class AuctionShowPage extends Component {
       console.log('Auction Show Page Rendered')
       const { title, body, end_date, reserve_price, created_at, updated_at, bids } = this.state.auction;
       return(
-        <main>
+        <main className="container">
           <AuctionDetails
             title={title}
             body={body}
@@ -44,11 +44,7 @@ class AuctionShowPage extends Component {
           <BidList
             bids={bids}
             /> 
-          {/* <Link question={this.state.question} to={`/questions/${this.state.question.id}/edit`}>Edit</Link>
-          <AnswerList
-            answers={answers}
-            deleteAnswer={this.deleteAnswer}
-          /> */}
+         
         </main>
       )
     }

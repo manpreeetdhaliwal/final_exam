@@ -24,7 +24,9 @@ class AuctionNewPage extends Component {
       };
 render(){
     return(
+      <div className="container">
         <form onSubmit={event => this.createAuction(event)}>
+          
           <div>
             <label htmlFor='title'>Title</label>
             <br />
@@ -48,7 +50,9 @@ render(){
           <div>
             <input type='submit' value='Submit' />
           </div>
+          
         </form>
+        </div>
       )
     }
       

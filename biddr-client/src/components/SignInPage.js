@@ -16,17 +16,18 @@ const SignInPage =({handleSubmit, history})=>{
 
     }
     return(
-        <main>
+        <main className="container">
         <h1>Sign In</h1>
         <form onSubmit={onSubmit}>
             <div>
-                <label htmlFor='email'>Email</label>
+                <label htmlFor='email'>Email</label><br/>
                 <input id='email' type='email' name='email' />
             </div>
+            
             <div>
-                <label htmlFor='password'>Password</label>
+                <label htmlFor='password'>Password</label><br/>
                 <input id='password' type='password' name='password' />
-            </div>
+            </div><br/>
             <input type='submit' value='Sign In' />
         </form>
         </main>

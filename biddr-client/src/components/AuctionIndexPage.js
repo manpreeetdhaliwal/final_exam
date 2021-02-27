@@ -30,16 +30,16 @@ class AuctionIndexPage extends Component {
     render() {
         console.log('Auction Index Page Rendered')
         return(
-          <main>
+          <main className="container">
           
-           <p>Index page</p>
+           <p><strong>Auctions Index page</strong></p>
             {this.state.auctions.map(a=> {
               return(
                 <div key={a.id}>
                   <Link to={`/auctions/${a.id}`}>
                     <h1>{a.id} - {a.title}</h1>
                   </Link>
-                  <p>{a.created_at}</p>
+                  <p>{a.created_at.toLocaleString()}</p>
                  
                 </div>
               )
