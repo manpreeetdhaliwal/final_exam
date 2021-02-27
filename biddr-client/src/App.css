@@ -1,0 +1,104 @@
+.App {
+  text-align: left;
+  background-color: lightgrey;
+}
+
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.font {
+  font-family: cursive;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.Welcome {
+  background-image: url("https://searchengineland.com/figz/wp-content/seloads/2014/09/auction-bid-gavel-money-ss-1920-800x450.jpg");
+  height: 87vh; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+.top-left {
+  position: absolute;
+  top: 78px;
+  left: 26px;
+  font-size: 25px;
+  font-style: italic;
+  color: black;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+/* Navbar links */
+.navbar-left {
+  float: left;
+  text-align: left;
+  padding: 2px;
+  margin-left: 5px;
+  color: black;
+  /* font-size: 20px; */
+  height: 10vh; 
+  background-repeat: no-repeat;
+  background-size: 5vh;
+  position: relative;
+  border-radius: 50px;
+
+}
+.navbar-right {
+  float: right;
+  text-align: right;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  color: black;
+  text-decoration: green;
+  font-size: 20px;
+  display: flex;
+ justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
