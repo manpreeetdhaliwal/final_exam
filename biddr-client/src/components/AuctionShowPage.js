@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import AuctionDetails from './AuctionDetails';
 import BidList from './BidList';
 import { Auction } from '../requests';
+import BidNewForm from './BidNewForm';
 
 class AuctionShowPage extends Component {
     constructor(props) {
@@ -40,6 +41,8 @@ class AuctionShowPage extends Component {
             created_at={new Date(created_at)}
             updated_at={new Date(updated_at)}
           />
+          <strong>Enter your Bid:</strong>
+          <BidNewForm/>
           <strong><p>Previous bids</p></strong>
           <BidList
             bids={bids}

@@ -1,7 +1,9 @@
 .App {
   text-align: left;
-
+  background-color: lightgrey;
 }
+
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
